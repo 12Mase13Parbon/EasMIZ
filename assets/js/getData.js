@@ -2,7 +2,7 @@ $(document).ready(function() {
     var i=0;
     $.ajax({
         type:"GET", 
-        url: "http://0.0.0.0:3000/regData", 
+        url: "https://db-care9-com.herokuapp.com/regData", 
         success: function(data) {
                 //var data = JSON.stringify(data);
                 

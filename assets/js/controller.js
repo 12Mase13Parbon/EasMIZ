@@ -31,7 +31,7 @@ $(document).ready(function() {
 
             $.ajax({
                 type : "post",
-                url : "http://0.0.0.0:3000/regData",
+                url : "https://db-care9-com.herokuapp.com/regData",
                 dataType: "text",
                 data : data,
                 success : function(student) {
