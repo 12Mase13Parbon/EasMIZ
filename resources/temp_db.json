@@ -13,6 +13,21 @@
       "section": "d",
       "ses": "2020",
       "id": 1
+    },
+    {
+      "name": "Titas",
+      "fname": "JCM",
+      "gname": "JCM",
+      "cnumber": "12345678",
+      "lnumber": "12345678",
+      "email": "email@email.com",
+      "ldnumber": "12345",
+      "password": "123",
+      "address": "none",
+      "classes": "a",
+      "section": "a",
+      "ses": "2018",
+      "id": 2
     }
   ]
 }

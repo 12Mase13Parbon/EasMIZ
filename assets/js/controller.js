@@ -31,7 +31,7 @@ $(document).ready(function() {
 
             $.ajax({
                 type : "post",
-                url : "http://localhost:3000/regData",
+                url : "http://0.0.0.0:3000/regData",
                 dataType: "text",
                 data : data,
                 success : function(student) {
