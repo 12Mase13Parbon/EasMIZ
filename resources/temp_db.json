@@ -1,32 +1,18 @@
 {
   "regData": [
     {
-      "name": "Name",
-      "fname": "fname",
-      "gname": "gname",
-      "cnumber": "cnum",
-      "lnumber": "lnum",
-      "email": "email@email.com",
-      "ldnumber": "123",
-      "password": "123",
-      "classes": "1",
-      "section": "a",
-      "ses": "2019",
+      "name": "heroku",
+      "fname": "git",
+      "gname": "git",
+      "cnumber": "12345678",
+      "lnumber": "12345678",
+      "email": "git@heroku.com",
+      "ldnumber": "12345",
+      "password": "1234",
+      "classes": "abstract",
+      "section": "d",
+      "ses": "2020",
       "id": 1
-    },
-    {
-      "name": "New Nm",
-      "fname": "fname",
-      "gname": "gname",
-      "cnumber": "1234567",
-      "lnumber": "1234567",
-      "email": "email@email.com",
-      "ldnumber": "234",
-      "password": "234",
-      "classes": "1",
-      "section": "r",
-      "ses": "2222",
-      "id": 2
     }
   ]
 }

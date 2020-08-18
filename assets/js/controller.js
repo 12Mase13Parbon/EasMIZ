@@ -9,6 +9,7 @@ $(document).ready(function() {
         var ldnumber = $("#ldnumber").val();
         var password = $("#password").val();
         var cpassword = $("#cpassword").val();
+        var address = $("#address").val();
         var classes = $("#classes").val();
         var section = $("#section").val();
         var ses = $("#ses").val();
@@ -22,6 +23,7 @@ $(document).ready(function() {
                 "email" : email,
                 "ldnumber" : ldnumber,
                 "password" : password,
+                "address" : address,
                 "classes" : classes,
                 "section" : section,
                 "ses" : ses
@@ -33,7 +35,8 @@ $(document).ready(function() {
                 dataType: "text",
                 data : data,
                 success : function(student) {
-                    console.log(student);
+                    var stuData = JSON.parse(student)
+                    console.log("Welcome" + stuData.name);
                 }   
             });
         }
