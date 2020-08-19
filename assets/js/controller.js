@@ -44,5 +44,34 @@ $(document).ready(function() {
             alert("Please confirm the password");
         }
         alert("hello");
-    })
+    });
+
+    $("#loginBtn").click(function() {
+        var loginEmail = $("#loginEmail").val();
+        var loginPassword = $("#loginPassword").val();
+        $.ajax({
+            type:"GET", 
+            url: "https://db-care9-com.herokuapp.com/regData", 
+            success: function(data) {
+                    //var data = JSON.stringify(data);
+                    var x = 0;
+                    console.log(data);
+                    for(var c=0;c<data.length;c++) {
+                        if(loginEmail == data[c].email && loginPassword == data[c].password) {
+                            alert("Welcome "+data[c].name);
+                            x++;
+                        }
+                    }
+                    if(x == 0) {
+                        alert("Please provide a valid email and Password");
+                    }
+                    
+                    
+                }, 
+            error: function(jqXHR, textStatus, errorThrown) {
+                    alert(jqXHR.status);
+                },
+           dataType: "jsonp"
+        });
+    });
 })

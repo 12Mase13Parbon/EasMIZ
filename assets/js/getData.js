@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var i=0;
+    
     $.ajax({
         type:"GET", 
         url: "https://db-care9-com.herokuapp.com/regData", 

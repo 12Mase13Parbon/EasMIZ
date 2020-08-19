@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--  meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Care9</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 offset-md-3 mt-5">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+                    Login
+                  </button>
+            </div>
+            <div class="col-md-3 mt-5">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">
+                    Register
+                  </button>
+            </div>
+        </div>
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control " id="loginEmail" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="loginPassword">
+                              </div>
+                              <button type="button" id="loginBtn" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="register" tabindex="-1" aria-labelledby="register" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label class="col-form-label col-form-label-sm" for="name">Your Name</label>
+                                <input type="text" class="form-control form-control-sm" id="name" aria-describedby="emailHelp" >
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-6">
+                                    <label class="col-form-label col-form-label-sm" for="fname">Father's Name</label>
+                                <input type="text" class="form-control form-control-sm" id="fname" aria-describedby="emailHelp" >
+                                </div>
+                                <div class="col-6">
+                                    <label class="col-form-label col-form-label-sm" for="gname">Guardian's Name</label>
+                                    <input type="text" class="form-control form-control-sm" id="gname" aria-describedby="emailHelp" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-6">
+                                    <label class="col-form-label col-form-label-sm" for="cnumber">Contact Number</label>
+                                    <input type="text" class="form-control form-control-sm" id="cnumber" aria-describedby="emailHelp" >
+                                </div>
+                                <div class="col-6">
+                                    <label class="col-form-label col-form-label-sm" for="lnumber">LandNumber</label>
+                                    <input type="text" class="form-control form-control-sm" id="lnumber" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-6">
+                                    <label class="col-form-label col-form-label-sm" for="email">Email</label>
+                                    <input type="email" class="form-control form-control-sm " id="email" aria-describedby="emailHelp" >
+                                </div>
+                                <div class="col-6">
+                                    <label class="col-form-label col-form-label-sm" for="ldnumber">ID No</label>
+                                    <input type="text" class="form-control form-control-sm " id="ldnumber" aria-describedby="emailHelp" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-6">
+                                    <label class="col-form-label col-form-label-sm" for="password">Password</label>
+                                    <input type="password" class="form-control form-control-sm " id="password" aria-describedby="emailHelp" >
+                                </div>
+                                <div class="col-6">
+                                    <label class="col-form-label col-form-label-sm" for="cpassword">Confirm Password</label>
+                                    <input type="password" class="form-control form-control-sm " id="cpassword" aria-describedby="emailHelp" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label col-form-label-sm" for="address">Address</label>
+                                <textarea class="form-control form-control-sm" id="address" aria-describedby="emailHelp" rows="2" ></textarea>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-4">
+                                    <label class="col-form-label col-form-label-sm" for="classes">Class</label>
+                                    <input type="text" class="form-control form-control-sm " id="classes" aria-describedby="emailHelp" >
+                                </div>
+                                <div class="col-4">
+                                    <label class="col-form-label col-form-label-sm" for="section">Section</label>
+                                    <input type="text" class="form-control form-control-sm " id="section" aria-describedby="emailHelp" >
+                                </div>
+                                <div class="col-4">
+                                    <label class="col-form-label col-form-label-sm" for="ses">Session</label>
+                                    <input type="text" class="form-control form-control-sm " id="ses" aria-describedby="emailHelp" >
+                                </div>
+                            </div>
+                            <button type="button" id="submit" class="btn btn-primary">Submit</button>
+                            <a href="./UI/regReqTable.html"><button type="button" id="getData" class="btn btn-success">Get all Registration</button></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="./assets/js/controller.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
