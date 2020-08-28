@@ -47,58 +47,25 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     
       
       <div class="w3-container w3-card w3-white">
-        <h2> Complete Your profile </h2>
+        <h2> Track your application </h2>
         
   
       </div>
 
       <div class="w3-container w3-card w3-white">
-        <div class="w3-container">
-          <p>
-            <input class="w3-input" type="text" id="name" disabled>
-            <label>Name</label>
-          </p>
-          <p>
-            <input class="w3-input" type="text" id="email" disabled>
-            <label>Email</label>
-          </p> 
-          
-          <p>
-            <input class="w3-input" type="text" id="fname" required>
-            <label>Father's Name</label>
-          </p> 
-
-          <p>
-            <input class="w3-input" type="text" id="gname" required>
-            <label>Guardian's Name</label>
-          </p> 
-
-          <p>
-            <input class="w3-input" type="text" id="lnumber" required>
-            <label>Alternate Number</label>
-          </p> 
-
-          <p>
-            <input class="w3-input" type="text" id="ldnumber" required>
-            <label>PAN Number</label>
-          </p> 
-
-          <p>
-            <textarea class="w3-input" id="address"></textarea>
-            <label>Address</label>
-          </p> 
-
-          <p>
-            <input class="w3-check" type="checkbox" id="terms">
-            <label>I agree with all terms and conditions</label>
-          </p>
-          <p>
-            <button class="w3-button w3-black" id="submit-btn">Submit and request for register</button>
-          </p>
-          <p>
-            <!-- <button class="w3-button w3-black" ><a href="./userReqTrack.html">Track appliction</a></button> -->
-          </p>
+        <div class="w3-responsive">
+            <table class="w3-table-all" id="reqTrack">
+                <tr>
+                <th>Request ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>PAN</th>
+                <th>Approval status</th>
+                </tr>
+            </table>
         </div>
+       
       </div>
       
       

@@ -9,13 +9,11 @@ $(document).ready(function() {
         //var ldnumber = $("#ldnumber").val();
         var password = $("#password").val();
         var cpassword = $("#cpassword").val();
-        // var address = $("#address").val();
-        // var classes = $("#classes").val();
-        // var section = $("#section").val();
-        // var ses = $("#ses").val();
+        
         var stream = $("#stream").val();
-        var status = "Not Approved";
+        var status = "Pending";
         var position = "Non Admin";
+        var reqId = null;
         if(password == cpassword) {
             // var data = {
             //     "name" : name,
@@ -38,7 +36,8 @@ $(document).ready(function() {
                 "password" : password,
                 "stream" : stream,
                 "status" : status,
-                "position" : position
+                "position" : position,
+                "reqId" : reqId
             }
 
             $.ajax({
@@ -73,6 +72,7 @@ $(document).ready(function() {
                             if(typeof(Storage) != "undefined") {
                                 localStorage.setItem("userId",data[c].id);
                                 localStorage.setItem("userPos",data[c].position);
+                                localStorage.setItem("reqId",data[c].reqId);
                             }
                             // alert(localStorage.getItem("userId"));
                             x++;
@@ -87,8 +87,17 @@ $(document).ready(function() {
                             console.log(localStorage.getItem("userPos"));
                         }
                         else {
-                            window.location.replace("../UI/user/profile.html");
-                            console.log(localStorage.getItem("userPos"));
+                            if(localStorage.getItem("reqId") == "") {
+                                
+                                window.location.replace("../UI/user/profile.html");
+                                
+                            }
+                            else {
+                                
+                                window.location.replace("../UI/user/userReqTrack.html");
+                                console.log(localStorage.getItem("reqId"));
+                            }
+                            
                         }
                         
                     }
