@@ -14,6 +14,8 @@ $(document).ready(function() {
         // var section = $("#section").val();
         // var ses = $("#ses").val();
         var stream = $("#stream").val();
+        var status = "Not Approved";
+        var position = "Non Admin";
         if(password == cpassword) {
             // var data = {
             //     "name" : name,
@@ -34,7 +36,9 @@ $(document).ready(function() {
                 "email" : email,
                 "cnumber" : cnumber,
                 "password" : password,
-                "stream" : stream
+                "stream" : stream,
+                "status" : status,
+                "position" : position
             }
 
             $.ajax({
@@ -68,6 +72,7 @@ $(document).ready(function() {
                         if(loginEmail == data[c].email && loginPassword == data[c].password) {
                             if(typeof(Storage) != "undefined") {
                                 localStorage.setItem("userId",data[c].id);
+                                localStorage.setItem("userPos",data[c].position);
                             }
                             // alert(localStorage.getItem("userId"));
                             x++;
@@ -77,7 +82,15 @@ $(document).ready(function() {
                         alert("Please provide a valid email and Password");
                     }
                     else {
-                        window.location.replace("../UI/user/profile.html");
+                        if(localStorage.getItem("userPos") == "Admin") { 
+                            window.location.replace("../UI/admin/adminIndex.html");
+                            console.log(localStorage.getItem("userPos"));
+                        }
+                        else {
+                            window.location.replace("../UI/user/profile.html");
+                            console.log(localStorage.getItem("userPos"));
+                        }
+                        
                     }
                 }, 
             error: function(jqXHR, textStatus, errorThrown) {
@@ -88,44 +101,5 @@ $(document).ready(function() {
     });
 });
 
-//user profile-----------------
-
-var userId = localStorage.getItem("userId");
-var userUrl = "https://db-care9-com.herokuapp.com/regData?id="+userId;
-var userName = null;
-var fname = null;
-var gname = null;
-var cnumber = null;
-var lnumber = null;
-var email = null;
-var ldnumber = null;
-var address = null;
-var classes = null;
-var section = null;
-var ses = null; 
-var stream = null;
-$.ajax({
-    type: "GET",
-    url: userUrl,
-    success: function(data) {
-        userName = data[0].name;
-        // fname = data[0].fname;
-        // gname = data[0].gname;
-        cnumber = data[0].cnumber;
-        // lnumber = data[0].lnumber;
-        email = data[0].email;
-        // ldnumber = data[0].ldnumber;
-        // address = data[0].address;
-        // classes = data[0].classes;
-        // section = data[0].section;
-        // ses = data[0].ses;
-        stream = data[0].stream;
-        $("#userName").html(userName);  
-        $("#userEmail").html("&nbsp;&nbsp;"+email);
-        // $("#userAddress").html("&nbsp;&nbsp;"+address);
-        $("#userNumber").html("&nbsp;&nbsp;"+cnumber);
-        $("#userSession").html("&nbsp;&nbsp;"+stream);
-    }
-});
 
 
