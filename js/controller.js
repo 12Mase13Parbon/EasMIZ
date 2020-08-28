@@ -1,34 +1,15 @@
 $(document).ready(function() {
     $("#register").click(function() {
         var name = $("#name").val();
-        // var fname = $("#fname").val();
-        // var gname = $("#gname").val();
         var cnumber = $("#cnumber").val();
-        // var lnumber = $("#lnumber").val();
         var email = $("#email").val();
-        //var ldnumber = $("#ldnumber").val();
         var password = $("#password").val();
         var cpassword = $("#cpassword").val();
-        
         var stream = $("#stream").val();
         var status = "Pending";
         var position = "Non Admin";
         var reqId = null;
         if(password == cpassword) {
-            // var data = {
-            //     "name" : name,
-            //     "fname" : fname,
-            //     "gname" : gname,
-            //     "cnumber" : cnumber,
-            //     "lnumber" : lnumber,
-            //     "email" : email,
-            //     "ldnumber" : ldnumber,
-            //     "password" : password,
-            //     "address" : address,
-            //     "classes" : classes,
-            //     "section" : section,
-            //     "ses" : ses
-            // }
             var data = {
                 "name" : name,
                 "email" : email,
@@ -39,7 +20,6 @@ $(document).ready(function() {
                 "position" : position,
                 "reqId" : reqId
             }
-
             $.ajax({
                 type : "post",
                 url : "https://db-care9-com.herokuapp.com/regData",
@@ -74,7 +54,6 @@ $(document).ready(function() {
                                 localStorage.setItem("userPos",data[c].position);
                                 localStorage.setItem("reqId",data[c].reqId);
                             }
-                            // alert(localStorage.getItem("userId"));
                             x++;
                         }
                     }
@@ -88,18 +67,13 @@ $(document).ready(function() {
                         }
                         else {
                             if(localStorage.getItem("reqId") == "") {
-                                
                                 window.location.replace("../UI/user/profile.html");
-                                
                             }
                             else {
-                                
                                 window.location.replace("../UI/user/userReqTrack.html");
                                 console.log(localStorage.getItem("reqId"));
                             }
-                            
                         }
-                        
                     }
                 }, 
             error: function(jqXHR, textStatus, errorThrown) {

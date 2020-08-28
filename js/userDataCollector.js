@@ -15,7 +15,6 @@ $(document).ready(function() {
     var ses = null; 
     var stream = null;
     var status = null;
-    
     var password = null;
     if(userPos != "Admin") {
         $.ajax({
@@ -23,31 +22,21 @@ $(document).ready(function() {
             url: userUrl,
             success: function(data) {
                 userName = data[0].name;
-                // fname = data[0].fname;
-                // gname = data[0].gname;
                 password = data[0].password;
                 cnumber = data[0].cnumber;
-                // lnumber = data[0].lnumber;
                 email = data[0].email;
                 status = data[0].status;
-                // ldnumber = data[0].ldnumber;
-                // address = data[0].address;
-                // classes = data[0].classes;
-                // section = data[0].section;
-                // ses = data[0].ses;
                 stream = data[0].stream;
                 status = data[0].status;
                 $("#userName").html(userName.toUpperCase());  
                 $("#name").val(userName.toUpperCase());  
                 $("#userEmail").html("&nbsp;&nbsp;"+email);
                 $("#email").val(email);
-                // $("#userAddress").html("&nbsp;&nbsp;"+address);
                 $("#userNumber").html("&nbsp;&nbsp;"+cnumber);
                 $("#userSession").html("&nbsp;&nbsp;"+stream.toUpperCase());
             }
         });
     }
-
     $("#submit-btn").click(function() {
         fname = $("#fname").val();
         gname = $("#gname").val();
