@@ -72,7 +72,21 @@ $(document).ready(function() {
         type: "GET",
         url: userUrl,
         success: function(data) {
-            $('#reqTrack').append('<tr><td>'+data[0].reqId+'</td><td>'+data[0].name+'</td><td>'+data[0].email+'</td><td>'+data[0].cnumber+'</td><td>'+data[0].ldnumber+'</td><td>'+data[0].status+'</td></tr>');
+            //$('#reqTrack').append('<tr><td>'+data[0].reqId+'</td><td>'+data[0].name+'</td><td>'+data[0].email+'</td><td>'+data[0].cnumber+'</td><td>'+data[0].ldnumber+'</td><td>'+data[0].status+'</td></tr>');
+            var qr;
+            var data = {
+                "Request ID" : data[0].reqId,
+                "Name" : data[0].name,
+                "Email" : data[0].email,
+                "Contact Number" : data[0].cnumber,
+                "PAN Number" : data[0].ldnumber,
+                "Application status" : data[0].status
+            };
+                qr = new QRious({
+                element: document.getElementById('qr-code'),
+                size: 200,
+                value: JSON.stringify(data)
+            });
         } 
     });
 })    

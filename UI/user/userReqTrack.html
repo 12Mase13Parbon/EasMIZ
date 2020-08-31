@@ -54,7 +54,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
       <div class="w3-container w3-card w3-white">
         <div class="w3-responsive">
-            <table class="w3-table-all" id="reqTrack">
+          <h3>
+            Your details have been stored into below QR<br>
+            Please scan below QR to track the current update
+          </h3><hr>
+            <!-- <table class="w3-table-all" id="reqTrack">
                 <tr>
                 <th>Request ID</th>
                 <th>Name</th>
@@ -63,8 +67,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
                 <th>PAN</th>
                 <th>Approval status</th>
                 </tr>
-            </table>
+            </table> -->
         </div>
+        <canvas id="qr-code"></canvas>
        
       </div>
       
@@ -89,6 +94,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <i class="fa fa-linkedin w3-hover-opacity"></i>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/userDataCollector.js"></script>
 <script>
